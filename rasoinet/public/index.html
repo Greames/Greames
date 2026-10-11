@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RasoiNet</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23c2410c'/><text x='16' y='22' font-size='16' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='700'>R</text></svg>">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><span class="logo">R</span><div><strong>RasoiNet</strong><small>Restaurant back-office</small></div></div>
+      <nav id="nav">
+        <div class="nav-group">Overview</div>
+        <a href="#/dashboard">Dashboard</a>
+        <a href="#/sales">Sales</a>
+        <a href="#/billing">Billing (POS)</a>
+        <div class="nav-group">Food cost</div>
+        <a href="#/menu">Menu &amp; recipes</a>
+        <a href="#/inventory">Inventory</a>
+        <a href="#/purchases">Purchases &amp; vendors</a>
+        <div class="nav-group">People</div>
+        <a href="#/schedule">Staff schedule</a>
+        <a href="#/payroll">Payroll (PF/ESI/PT)</a>
+        <div class="nav-group">Finance &amp; compliance</div>
+        <a href="#/pnl">Profit &amp; loss</a>
+        <a href="#/gst">GST returns</a>
+        <a href="#/compliance">Licences &amp; filings</a>
+      </nav>
+    </aside>
+    <div class="main">
+      <header class="topbar">
+        <button class="icon-btn" id="menuToggle" aria-label="Toggle navigation">☰</button>
+        <h1 id="title">Dashboard</h1>
+        <div class="filters" id="filters">
+          <label>Outlet <select id="outlet"></select></label>
+          <label class="range">From <input type="date" id="from"></label>
+          <label class="range">To <input type="date" id="to"></label>
+          <label class="month">Month <input type="month" id="month"></label>
+        </div>
+      </header>
+      <main id="view" class="view" aria-live="polite"></main>
+    </div>
+  </div>
+  <div id="tooltip" class="tooltip" role="tooltip" hidden></div>
+  <dialog id="modal"><div id="modalBody"></div></dialog>
+  <div id="toast" class="toast" hidden></div>
+  <script src="app.js"></script>
+</body>
+</html>

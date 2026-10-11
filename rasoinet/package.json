@@ -1,0 +1,14 @@
+{
+  "name": "rasoinet",
+  "version": "0.1.0",
+  "description": "Multi-outlet restaurant back-office for India: sales, GST, inventory, recipe costing, labour & payroll, P&L and compliance.",
+  "main": "server.js",
+  "private": true,
+  "engines": { "node": ">=22.13" },
+  "scripts": {
+    "start": "node --no-warnings=ExperimentalWarning server.js",
+    "reseed": "node --no-warnings=ExperimentalWarning server.js --reseed",
+    "test": "node --no-warnings=ExperimentalWarning --test test/*.test.js"
+  },
+  "license": "MIT"
+}
